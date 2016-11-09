@@ -1,5 +1,5 @@
 <?php
-function my_theme_enqueue_styles() {
+function abcd_enqueue_styles() {
 
     $parent_style = 'parent-style'; // This is 'twentysixteen-style' for the Twenty Sixteen theme.
 
@@ -10,7 +10,7 @@ function my_theme_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 }
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'abcd_enqueue_styles' );
 
 // Our custom post type function
 function create_posttype() {
