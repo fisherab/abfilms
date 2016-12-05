@@ -4,11 +4,18 @@ import MySQLdb as mdb
 import sys
 import re
 import datetime
+import time
 import os
 from sets import Set
+import shutil
+import subprocess
 
-little = Set(["in","on","a","the","at","and"])
 galleries = "/home/fisher/galleries"
+username = 'root'
+schemain = 't'
+schemaout = 'wp'
+dbhost = 'localhost'
+base = '/var/www/html'
 
 def abort(msg):
     print >> sys.stderr, msg
@@ -30,18 +37,22 @@ args = sys.argv[1:]
 if len(args) != 1: abort("Must have one argument")
 password = args[0]
 
-username = 'root'
-schemain = 't'
-schemaout = 'smf'
-dbhost = 'localhost'
+shutil.rmtree(os.path.join(base, "wp-content", "uploads"), True)
 
+little = Set(["in","on","a","the","at","and"])
 months =  ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 conin = mdb.connect(dbhost, username, password, schemain)
-cur = conin.cursor()
+curin = conin.cursor()
 conout = mdb.connect(dbhost, username, password, schemaout)
+curout = conout.cursor()
 
-count = cur.execute("select p.post_title, p.post_name, p.post_date, p.post_content, t.name from wp_posts p, wp_term_relationships r, wp_term_taxonomy x, wp_terms t where x.term_id = t.term_id and r.term_taxonomy_id = x.term_taxonomy_id and r.object_id = p.id and post_status = 'publish' and post_type='post' order by p.post_title")
+curout.execute("delete from wp_posts where post_type != 'acf'")
+curout.execute("select id from wp_posts")
+acfid = curout.fetchall()[0][0]
+curout.execute("delete from wp_postmeta where post_id != " + str(acfid))
+
+count = curin.execute("select p.post_title, p.post_name, p.post_date, p.post_content, t.name from wp_posts p, wp_term_relationships r, wp_term_taxonomy x, wp_terms t where x.term_id = t.term_id and r.term_taxonomy_id = x.term_taxonomy_id and r.object_id = p.id and post_status = 'publish' and post_type='post' order by p.post_title")
 
 allImages = []
 for dir in os.listdir(galleries):
@@ -51,21 +62,21 @@ for dir in os.listdir(galleries):
 comments= {}
 programmes = {}
 titpat = re.compile(r"(.*)\((.*)\)")
+wh = re.compile(r"^.* JPEG (\d+)x(\d+) .*")
 screenings = []
 
-def getTitle(title):            
+def getTitle(title):
     ftitle = None
-    m = titpat.match(title)                                                                                
+    m = titpat.match(title)
     if m: title, ftitle = m.groups()
     return title, ftitle
 
-posts = cur.fetchall()
+posts = curin.fetchall()
 for post in posts:
     title, name, date, content, category = post
     if len(content) < 10: continue
     if category in ["Newletters", "News items"]:
         pass
-#        print title, name, category
     else:
         if category == "Listings":continue
         if "Listings" in category or "Screenings" in category:
@@ -88,7 +99,7 @@ E ABCD ANNUAL SILENT CLASSIC"]:
             bits = title.split(" - ")
             if len(bits) == 2:
                 title, ftitle = getTitle(bits[0].strip())
-                
+
                 datestring = bits[1].strip()
                 datebits = datestring.split()
                 if len(datebits) == 2:
@@ -113,17 +124,18 @@ E ABCD ANNUAL SILENT CLASSIC"]:
             month = months.index(month)+1
             if month < 9: year = year + 1
             date = datetime.date(year, month, int(day[:-2]))
-             
+
             screening = Screening()
-            screening.title, screening.date, screening.ftitle, screening.name, screening.content = title, date, ftitle, name, content[:20]
+            screening.title, screening.date, screening.ftitle, screening.name, screening.content = title, date, ftitle, name, content
             screenings.append(screening)
-        
+
         elif category == "Programme":
-            programmes[title] = content[:20]
+            programmes[title] = content
 
         elif category == "Comments":
-            comments[title] = content[:20]
+            comments[title] = content
 
+tags = re.compile(r"</?(.*?)>")
 for screening in screenings:
     if screening.title in programmes:
         screening.programme = programmes[screening.title]
@@ -131,14 +143,14 @@ for screening in screenings:
     else:
         for title in programmes.keys():
             if title.lower().startswith(screening.title.lower()):
-                screening.programme = programmes[title]
+                screening.programme = tags.sub('', programmes[title])
                 del programmes[title]
                 break
     if not screening.programme:
         print "No prog for ",  screening.title, screening.date
-        
+
     if screening.title in comments:
-        screening.comments = comments[screening.title]
+        screening.comments = tags.sub('',comments[screening.title])
         del comments[screening.title]
     else:
         for title in comments.keys():
@@ -151,7 +163,7 @@ for screening in screenings:
 
     dir = galleries + "/" + months[screening.date.month-1].lower()+str(screening.date.year)[2:]
 
-    if not os.path.exists(dir): 
+    if not os.path.exists(dir):
         continue
 
     twords = Set(screening.title.lower().split())
@@ -191,3 +203,73 @@ for t in comments:
 print "\nUnused images"
 for image in allImages:
     print image
+
+print "Now start importing", len(screenings), "screenings"
+curout.execute("select max(id) from wp_posts");
+postid = curout.fetchall()[0][0]+1
+curout.execute("select max(meta_id) from wp_postmeta");
+postmetaid = curout.fetchall()[0][0]+1
+
+for screening in screenings:      
+    year = screening.date.year
+    month = screening.date.month
+    drel =  os.path.join("wp-content", "uploads", str(year), str(month))
+    if screening.image:
+        image =  '<img class=" wp-image-428 alignleft" src="' + os.path.join("/", drel, os.path.basename(screening.image)) +'" alt="' + screening.name + '" width="400" height="266" />'
+    else:
+        image = ''
+
+    tuple = (postid, image + screening.content, screening.title, screening.name, "/?post_type=screening&#038;p=" + str(postid))
+
+    curout.execute("""insert into wp_posts (id, post_author, post_date, post_date_gmt, post_content, post_title,
+        post_excerpt, post_status, comment_status, ping_status, post_name,  to_ping, pinged, post_modified, post_modified_gmt, 
+        post_content_filtered, guid, post_type, post_mime_type) values (%s, 1, now(), now(), %s, %s, '', 'publish',
+        'closed', 'closed', %s, '', '', now(), now(), '', %s, 'screening', '' )""", tuple)
+
+    tuples = [(postmetaid, postid, 'datetime',  str(int(time.mktime(screening.date.timetuple())))),
+              (postmetaid + 1, postid, '_datetime', 'field_5831ced85298d')]
+    postmetaid += 2
+    if screening.programme:
+        tuples.extend([(postmetaid, postid, 'notes', screening.programme),
+                  (postmetaid + 1, postid, '_notes', 'field_5831d68620cc4')])
+        postmetaid += 2
+    if screening.comments:
+        tuples.extend([(postmetaid, postid, 'comments', screening.comments),
+              (postmetaid + 1, postid, '_comments', 'field_5831d6c520cc5')])
+        postmetaid += 2
+
+    curout.executemany("insert into wp_postmeta (meta_id, post_id, meta_key, meta_value) values (%s, %s, %s, %s)", tuples)
+
+    mainPostId = postid
+    postid += 1
+    
+    if screening.image:
+        d = os.path.join(base, drel)
+        loc =  os.path.join(str(year), str(month), os.path.basename(screening.image))
+        try: os.makedirs(d)
+        except: pass
+        shutil.copy(screening.image, d)
+        line = subprocess.check_output (["identify", screening.image])
+        m = wh.match(line)
+        if m:
+            w, h = m.groups()
+        else:
+            abort("Can't parse " + line)
+        tuple = (postid, screening.name, screening.name, os.path.join(drel, os.path.basename(screening.image)))
+
+        curout.execute("""insert into wp_posts (id, post_author, post_date, post_date_gmt, post_content, post_title,
+        post_excerpt, post_status, ping_status, post_name,  to_ping, pinged, post_modified, post_modified_gmt, 
+        post_content_filtered, guid, post_type, post_mime_type) values (%s, 1, now(), now(), '', %s, '', 'inherit',
+        'closed', %s, '', '', now(), now(), '', %s, 'attachment', 'image/jpeg' )""", tuple)
+
+        md = 'a:4:{s:5:"width";i:' + w + ';s:6:"height";i:' + h + ';s:4:"file";s:' + str(len(loc)) + ':"' + loc + '";s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'
+        tuples = [(postmetaid, postid,  '_wp_attached_file', loc),
+                  (postmetaid + 1, postid, '_wp_attachment_metadata', md)]
+        curout.executemany("insert into wp_postmeta (meta_id, post_id, meta_key, meta_value) values (%s, %s, %s, %s)", tuples)
+        postmetaid += 2
+        postid += 1
+
+conin.close()
+conout.commit()
+conout.close()
+
