@@ -24,12 +24,12 @@
 
 			the_content();
 
-			if ('' !== get_field('notes')) {
+			if (get_field('notes')) {
 				  echo '<h2>Programme Notes</h2>';
 					echo get_field('notes');
 			}
 
-			if ('' !== get_field('comments')) {
+			if (get_field('comments')) {
 					echo '<h2>Comments</h2>';
 					echo get_field('comments');
 					echo '<br/>';
