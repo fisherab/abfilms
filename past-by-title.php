@@ -26,20 +26,8 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<?php
 		// Start the loop.
-    while ( $the_query->have_posts() ) : $the_query->the_post();	?>
-    //	get_template_part( 'template-parts/content', 'page-screening' );
-
-    <li>
-      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><em>
-     <?php if (get_field('aka'))   {echo '(' . get_field('aka') . ') ';}
-
-
-     echo date_i18n('M j, Y', get_field('datetime'));	?>
-   </em></li>
-
-    	<?php
-
-
+    while ( $the_query->have_posts() ) : $the_query->the_post();
+      get_template_part( 'template-parts/content', 'page-summary' );
 			// End of the loop.
 		endwhile;
 
