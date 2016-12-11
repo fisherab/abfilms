@@ -1,0 +1,293 @@
+2007-2008 F The Lives of Others,43,9,1,0,0,95
+2007-2008 F Black Book,29,7,2,0,0,93
+2007-2008 F Volver,33,8,3,1,0,91
+2007-2008 F Rebecca,22,9,4,0,0,88
+2007-2008 F A Prairie Home Companion,33,11,7,1,0,87
+2007-2008 F Ghosts,25,16,3,0,0,87
+2007-2008 F Diary of a Lost Girl,23,16,2,0,1,86
+2007-2008 F Pan's Labyrinth,26,15,4,2,0,85
+2007-2008 F The Wind That Shakes the Barley,28,7,4,1,2,85
+2007-2008 F Bamako,23,12,2,3,0,84
+2007-2008 F The Three Burials of Melquiades Estrada,20,14,5,1,0,83
+2007-2008 F Duck Soup,13,16,6,1,0,78
+2007-2008 F Los Olvidados,17,16,9,2,0,77
+2007-2008 F The Innocents,16,19,7,5,1,74
+2007-2008 F Summer Interlude,14,17,9,4,0,73
+2007-2008 F Keane,9,21,7,4,1,70
+2007-2008 F Münchhausen,14,13,12,5,1,69
+2007-2008 F The Squid and the Whale,7,17,8,2,1,69
+2007-2008 F L'Enfant,6,22,15,3,0,67
+2007-2008 F Man of Aran,6,20,19,3,3,61
+2007-2008 F Pickpocket,4,11,15,5,1,58
+2007-2008 S Land Without Bread,6,24,12,7,2,62
+2006-2007 F A Night at the Opera,40,11,2,0,0,93
+2006-2007 F Sophie Scholl,45,13,4,0,0,92
+2006-2007 F Merchant of Venice,42,14,5,0,0,90
+2006-2007 F Moolaade,27,18,1,1,0,88
+2006-2007 F Saraband,29,16,8,0,0,85
+2006-2007 F Untold Scandal,23,15,5,1,0,84
+2006-2007 F Hidden,20,24,3,2,0,82
+2006-2007 F Billy Liar,20,15,7,1,0,81
+2006-2007 F Brokeback Mountain,20,13,8,1,0,81
+2006-2007 F A Cock and Bull...,29,16,6,3,1,80
+2006-2007 F Mysterious Skin,11,17,0,1,2,77
+2006-2007 F Mirror,18,17,7,6,0,75
+2006-2007 F Woman of the Dunes,15,22,8,2,1,75
+2006-2007 F Bombon El Perro,13,38,10,1,0,75
+2006-2007 F Sweet Smell of Success,16,26,7,7,0,73
+2006-2007 F Partie de campagne,9,12,9,3,0,70
+2006-2007 F Menschen Am Sonntag,8,16,7,5,0,69
+2006-2007 F Dead of Night,11,16,19,4,0,67
+2006-2007 F Bob le Flambeur,8,17,15,9,0,62
+2006-2007 S Entr’acte,6,15,7,2,1,69
+2008-2009 F Days of Glory,39,4,1,0,0,97
+2008-2009 F Safety Last,50,9,0,0,0,96
+2008-2009 F Oh! What a Lovely War,24,4,1,0,0,95
+2008-2009 F Little Miss Sunshine,31,10,1,0,0,93
+2008-2009 F The Kite Runner,39,11,3,0,0,92
+2008-2009 F Edge of Heaven,37,19,2,0,0,90
+2008-2009 F Persepolis,37,13,4,0,0,90
+2008-2009 F Holiday,25,14,1,0,0,90
+2008-2009 F Away from Her,32,9,6,0,0,89
+2008-2009 F In Prison My Whole Life,4,3,0,0,0,89
+2008-2009 F Rififi,22,14,3,0,0,87
+2008-2009 F And When ... Father,28,27,4,1,0,84
+2008-2009 F Tell No One,26,20,4,2,0,84
+2008-2009 F The Killers,15,12,4,0,0,84
+2008-2009 F The Darjeeling Limited,22,16,5,1,1,82
+2008-2009 F This Is England,18,13,3,1,1,81
+2008-2009 F Happy-Go-Lucky,21,28,7,1,0,80
+2008-2009 F Spellbound,20,22,8,1,0,80
+2008-2009 F Chapayev,11,25,6,1,0,77
+2008-2009 F Ten Canoes,13,17,7,2,0,76
+2008-2009 F Alice in the Cities,15,19,16,2,0,73
+2008-2009 F Garage,9,19,8,3,0,72
+2008-2009 F Summer Things,2,12,7,0,0,69
+2008-2009 F Still Life,7,18,9,5,0,67
+2008-2009 F It's a Gift,4,10,8,4,2,59
+2008-2009 F Peter and Pavla,1,3,20,11,4,41
+2008-2009 S Never Weaken,48,8,1,0,0,96
+2008-2009 S Night Mail,14,7,3,0,0,86
+2008-2009 S Hotel Chevalier,8,15,8,0,0,75
+2008-2009 S Housewives' Choice,15,24,8,3,2,73
+2008-2009 S The Way to the Sea,5,11,5,2,0,71
+2008-2009 S Mutiny Ain't Nice,7,9,6,0,3,67
+2008-2009 S The Dentist,3,5,9,6,2,51
+2009-2010 F Katyn,37,7,0,0,0,96
+2009-2010 F Gentlemen Prefer Blondes,36,9,4,0,0,92
+2009-2010 F Little Miss Sunshine,13,4,1,0,0,92
+2009-2010 F Film Music of Arthur Benjamin,25,13,0,0,0,91
+2009-2010 F Hunger,25,6,1,0,1,91
+2009-2010 F The Reader,34,14,3,0,0,90
+2009-2010 F Cherry Blossoms,23,14,4,0,0,87
+2009-2010 F Waltz With Bashir,21,13,4,0,0,86
+2009-2010 F Ugetsu Monogatari,17,15,2,0,0,86
+2009-2010 F Looking for Eric,16,15,0,1,0,86
+2009-2010 F The Golem,26,17,7,1,0,83
+2009-2010 F Of Time and the City,19,17,6,0,1,82
+2009-2010 F Jar City,17,28,5,0,0,81
+2009-2010 F The Class,9,13,3,0,0,81
+2009-2010 F Let the Right One In,7,9,4,0,0,79
+2009-2010 F Il Divo,15,22,8,1,0,78
+2009-2010 F Quai des Brumes,15,17,10,0,0,78
+2009-2010 F The Four Feathers,10,24,6,0,0,78
+2009-2010 F Don Quixote,17,26,7,1,1,77
+2009-2010 F Juno,16,8,9,2,0,77
+2009-2010 F The Fortune Cookie,15,21,11,0,0,77
+2009-2010 F Rachel Getting Married,7,22,13,6,1,64
+2009-2010 F The Fourth Man,4,22,17,2,2,63
+2009-2010 F Vampyr,4,6,8,0,2,63
+2009-2010 F Zero de Conduite,7,3,5,2,4,58
+2009-2010 F Three Monkeys,10,15,13,3,1,56
+2009-2010 S Alice in Wonderland,11,8,0,0,0,90
+2009-2010 S A Propos de Nice,11,4,2,2,2,74
+2009-2010 S The Magic Mile,5,19,16,6,1,61
+2010-2011 F The Kid Brother,56,7,1,0,0,96
+2010-2011 F Drifters,9,3,0,0,0,94
+2010-2011 F Bienvenue Chez les Ch'tis,39,6,4,0,0,93
+2010-2011 F Morris: A Life With Bells On,34,13,3,0,0,89
+2010-2011 F The Battle of Algiers,24,12,4,1,0,86
+2010-2011 F His Girl Friday,23,14,3,1,0,86
+2010-2011 F The Ghost,26,15,5,1,0,85
+2010-2011 F El Baño del Papa,21,23,3,0,0,85
+2010-2011 F Kiss Me Kate,16,9,4,0,0,85
+2010-2011 F Mother (Madeo),24,15,3,1,2,82
+2010-2011 F The Beaches of Agnes,18,14,4,0,1,82
+2010-2011 F Four Lions,20,21,7,2,0,80
+2010-2011 F Quand J'Etais Chanteur,11,25,4,0,0,80
+2010-2011 F Katalin Varga,11,22,5,0,0,79
+2010-2011 F Of a Thousand Delights,14,19,14,2,0,73
+2010-2011 F Fish Tank,12,11,6,4,0,73
+2010-2011 F When a Woman Ascends the Stairs,9,19,9,2,0,72
+2010-2011 F Queen of Spades,14,21,12,6,1,69
+2010-2011 F Hukkle,10,13,6,6,0,69
+2010-2011 F Nightwatching,16,16,11,7,2,68
+2010-2011 F Company Limited,12,17,5,5,3,68
+2010-2011 F A Serious Man,5,23,12,5,0,66
+2010-2011 F Radio On,5,13,13,8,2,57
+2010-2011 F Memories of Underdev.,3,16,17,4,3,57
+2010-2011 S Footage,7,15,7,3,0,70
+2010-2011 S Pulmo Marina,8,12,10,4,0,68
+2010-2011 S Eye / I,6,11,10,4,1,63
+2010-2011 S Tomorrow Everything Will Be Alright,5,17,10,9,2,58
+2010-2011 S Ausgeträumt,4,8,17,9,2,52
+2010-2011 S This Quality,2,4,14,11,6,40
+2010-2011 S A Love Story,0,9,12,12,6,40
+2010-2011 S The Coat,2,7,13,16,12,36
+2011-2012 F The Great White Silence,39,3,0,0,0,98
+2011-2012 F Life, Above All,40,32,8,0,0,95
+2011-2012 F Made in Dagenham,44,11,3,0,0,93
+2011-2012 F The Secret in Their Eyes,32,8,2,0,0,93
+2011-2012 F Taxi Driver,22,13,2,0,0,89
+2011-2012 F Another Year,27,13,4,0,0,88
+2011-2012 F Stormy Weather (and live jazz),20,12,2,0,0,88
+2011-2012 F The Return,22,10,4,0,0,87
+2011-2012 F Loose Cannons,21,18,3,0,0,86
+2011-2012 F I Was Born, But...,34,20,8,0,0,85
+2011-2012 F The Illusionist,25.5,17.5,6,0,0,85
+2011-2012 F Le Samouraï,28,18,7,1,0,84
+2011-2012 F Exit Through the Gift Shop,19,20,8,0,0,81
+2011-2012 F A Screaming Man,18,16,7,1,0,80
+2011-2012 F My Man Godfrey,16,18,7,1,0,79
+2011-2012 F The Scarlet Empress,14,18,8,1,0,77
+2011-2012 F Good Morning,12,11,8,1,0,77
+2011-2012 F My Dog Tulip,11,15,5,2,0,77
+2011-2012 F Diary of a Chambermaid,14,21,12,3,0,73
+2011-2012 F Animal Kingdom,13,15,8,2,2,72
+2011-2012 F Gun Crazy,11,13,18,3,0,68
+2011-2012 F Before the Revolution,6,17,13,2,2,64
+2011-2012 F Archipelago,7,11,14,10,1,58
+2011-2012 F Uncle Boonmee Who Can Recall His Past Lives,5,8,6,11,0,56
+2011-2012 F Police, Adjective,2,13,14,10,7,47
+2011-2012 S Soigne ton Gauche,12,21,10,2,0,74
+2012-2013 F A Matter of Life and Death,28,6,2,0,0,93
+2012-2013 F Psycho,22,11,1,0,0,90
+2012-2013 F We Need to Talk About Kevin,16,6,2,0,0,90
+2012-2013 F A Separation,26,7,3,1,0,89
+2012-2013 F Headhunters,21,8,2,1,2,89
+2012-2013 F No Man's Land,26,12,1,1,1,87
+2012-2013 F Potiche,20,15,1,1,0,87
+2012-2013 F The Descendants,23,17,6,0,0,84
+2012-2013 F Margin Call,32,20,8,2,0,83
+2012-2013 F My Week With Marilyn,20,18,2,1,1,83
+2012-2013 F An Italian Straw Hat,20,12,6,1,0,83
+2012-2013 F Passport to Pimlico,24,10,9,1,1,81
+2012-2013 F Trishna,16,16,6,1,0,80
+2012-2013 F Las Acacias,16,23,7,1,0,79
+2012-2013 F The Band Wagon,7,9,1,0,1,79
+2012-2013 F Carnage,16,17,7,1,1,77
+2012-2013 F Where Do We Go Now?,9,15,7,0,0,77
+2012-2013 F Meet Me In St Louis,14,12,5,4,1,75
+2012-2013 F Day of Wrath,20,14,10,4,1,74
+2012-2013 F The Invisible Man,18,10,10,4,0,73
+2012-2013 F J'ai Tué Ma Mère,13,14,10,3,0,73
+2012-2013 F Beasts of the Southern Wild,5,5,6,2,2,61
+2012-2013 F At the Height of Summer,3,14,14,4,1,60
+2012-2013 F Little Fish,5,10,11,10,3,53
+2012-2013 F Days of '36,8,6,14,11,3,53
+2012-2013 S The Elephant Will Never Forget,27,8,5,0,0,89
+2012-2013 S Penny Journey,29,17,9,2,1,81
+2012-2013 S I Want to Go to School,20,13,5,2,1,80
+2012-2013 S Welfare of the Workers,13,16,7,4,0,74
+2012-2013 S Cargoes,5,20,10,3,0,68
+2012-2013 S Farewell Topsails,2,21,17,4,0,62
+2012-2013 S The Farm, English Harvest,5,15,18,6,1,59
+2012-2013 S Birth of a Robot,3,16,7,8,6,51
+2013-2014 F Fantastic Mr Fox,12,1,1,0,0,95
+2013-2014 F All Quiet on the Western Front,33,5,3,1,0,92
+2013-2014 F On the Waterfront,25,12,0,0,0,92
+2013-2014 F The Hunt,30,8,2,0,1,90
+2013-2014 F 5 Broken Cameras,28,7,4,0,0,90
+2013-2014 F Searching for Sugar Man,20,8,4,0,0,88
+2013-2014 F Even the Rain,25,14,2,1,0,87
+2013-2014 F Michael Grigsby, Documentarist,18,14,2,0,0,87
+2013-2014 F Untouchable,22,11,5,0,0,86
+2013-2014 F Caesar Must Die,23,14,3,2,0,85
+2013-2014 F Defence Counsel Sedov,15,11,5,1,0,82
+2013-2014 F Pandora's Box,16,20,4,1,0,81
+2013-2014 F Undertow,14,16,7,1,0,78
+2013-2014 F Three Colours White,13,17,11,1,0,75
+2013-2014 F OSS 117: Cairo, Nest of Spies,9,13,5,2,0,75
+2013-2014 F I Wish (Kiseki),10,12,11,3,0,70
+2013-2014 F Stand By Me,12,16,7,4,2,69
+2013-2014 F The Perks of Being a Wallflower,8,10,12,3,0,67
+2013-2014 F Funny Face,6,13,9,3,1,66
+2013-2014 F Ginger and Rosa,10,18,16,6,1,65
+2013-2014 F Berberian Sound Studio,5,7,10,11,8,44
+2013-2014 S Momma Don't Allow,15,14,9,2,0,76
+2013-2014 S Maria,8,13,7,4,0,70
+2013-2014 S Sonata for Hitler,8,13,7,4,0,70
+2013-2014 S The Ossuary,6,12,7,5,2,62
+2013-2014 S Down in the Cellar,5,7,10,11,8,62
+2014-2015 F Pride,22,8,0,0,0,93
+2014-2015 F Sparrows,23,7,4,0,0,90
+2014-2015 F Wajda,16,9,1,0,0,89
+2014-2015 F BAFTA Shorts Compilation 2014,16,8,2,0,0,88
+2014-2015 F A Hijacking,18,4,4,1,0,86
+2014-2015 F The Servant,25,11,7,0,0,85
+2014-2015 F Blancanieves,20,11,4,2,0,83
+2014-2015 F Autumn Sonata,20,14,3,3,0,82
+2014-2015 F On the Town,16,13,7,0,0,81
+2014-2015 F About Elly,15,17,4,1,0,81
+2014-2015 F Out In the Dark,14,10,7,0,0,81
+2014-2015 F Much Ado About Nothing,18,15,9,0,0,80
+2014-2015 F Rome, Open City,15,15,1,2,1,80
+2014-2015 F Queen Christina,11,18,6,0,0,80
+2014-2015 F Chocolat,17,18,11,1,0,77
+2014-2015 F What Maisie Knew,15,19,6,1,1,77
+2014-2015 F Nebraska,14,17,3,4,0,77
+2014-2015 F Life is a Long Quiet River,11,20,9,2,0,74
+2014-2015 F Invasion of the Body Snatchers,10,11,9,1,0,74
+2014-2015 F The Horse's Mouth,9,14,6,3,0,73
+2014-2015 F Mirror,17,5,9,7,1,69
+2014-2015 F Drifting Clouds,6,16,11,3,0,67
+2014-2015 F Gloria,3,18,7,6,1,61
+2014-2015 S Room 8,19,6,1,0,0,92
+2014-2015 S I am a Litter Basket,14,3,4,0,0,83
+2014-2015 S Orbit Ever After,13,8,3,1,0,83
+2014-2015 S Terminus,14,9,3,2,0,81
+2014-2015 S Keeping Up With the Joneses,12,9,3,2,0,80
+2014-2015 S Everything I Can See From Here,9,10,5,2,0,75
+2014-2015 S The Third Sam,11,10,7,3,0,73
+2014-2015 S Sleeping With the Fishes,8,12,4,2,1,72
+2014-2015 S A Trip To the Moon,9,10,4,3,1,71
+2014-2015 S Sea View,7,10,7,2,1,69
+2014-2015 S I Am Tom Moody,6,8,5,5,1,63
+2014-2015 S Island Queen,3,9,9,4,2,56
+2015-2016 F Our Hospitality,47,4,2,0,0,96
+2015-2016 F Ida,30,8,1,0,0,94
+2015-2016 F In the Shadow of the Sun,9,4,0,0,0,92
+2015-2016 F Calvary,25,8,2,1,0,90
+2015-2016 F What's Up, Doc?,24,12,1,0,1,88
+2015-2016 F Sixteen,22,14,1,1,0,87
+2015-2016 F Leviathan,21,14,3,1,0,85
+2015-2016 F The Golden Dream,17,11,4,0,0,85
+2015-2016 F Emil and the Detectives,18,21,3,1,0,83
+2015-2016 F Buena Vista Social Club,14,13,4,0,0,83
+2015-2016 F Offside,18,13,6,2,0,80
+2015-2016 F Fruitvale Station,14,14,3,2,0,80
+2015-2016 F Alone Across the Pacific,11,16,5,0,0,80
+2015-2016 F Locke,19,14,8,1,1,78
+2015-2016 F Salvatore Giuliano,12,14,9,1,0,76
+2015-2016 F Pepe le Moko,8,18,3,2,0,76
+2015-2016 F The Grand Budapest Hotel,19,14,11,3,1,74
+2015-2016 F Playing Away,13,6,13,4,0,69
+2015-2016 F Millions Like Us,5,17,8,3,0,66
+2015-2016 F Spring in a Small Town,7,12,12,5,1,63
+2015-2016 F Frank,3,6,10,5,0,57
+2015-2016 F The Butcher Boy,8,5,11,5,4,56
+2015-2016 F I'm Going Home,3,11,9,5,3,55
+2015-2016 S Car Park,23,3,2,0,0,94
+2015-2016 S Bear Story,17,13,3,1,0,84
+2015-2016 S Olympic Games,11,9,11,0,0,75
+2015-2016 S We Can't Live Without Cosmos,10,14,8,2,0,74
+2015-2016 S Padre,10,4,11,1,1,69
+2015-2016 S World of Tomorrow,9,14,6,4,1,69
+2015-2016 S Figures,9,16,12,3,2,66
+2015-2016 S Sanjay's Super Team,7,12,11,4,0,66
+2015-2016 S Marylin Myller,2,8,11,1,0,62
+2015-2016 S Prologue,7,10,9,4,4,59
+2015-2016 S Crocodile,8,9,12,5,4,58
+2015-2016 S A Million Miles Away,2,10,6,9,2,51
+2015-2016 S A Million Miles Away,3,3,13,9,3,45
+2015-2016 S The Dewberry Empire,0,9,5,6,4,45
