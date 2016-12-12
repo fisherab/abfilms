@@ -32,6 +32,7 @@ class Screening(object):
         self.comments = None
         self.programme = None
         self.image = None
+        self.scores = None
 
 args = sys.argv[1:]
 if len(args) != 1: abort("Must have one argument")
@@ -51,6 +52,7 @@ curout.execute("delete from wp_posts where post_type != 'acf'")
 curout.execute("select id from wp_posts")
 acfid = curout.fetchall()[0][0]
 curout.execute("delete from wp_postmeta where post_id != " + str(acfid))
+curout.execute("delete from wp_term_relationships")
 
 count = curin.execute("select p.post_title, p.post_name, p.post_date, p.post_content, t.name from wp_posts p, wp_term_relationships r, wp_term_taxonomy x, wp_terms t where x.term_id = t.term_id and r.term_taxonomy_id = x.term_taxonomy_id and r.object_id = p.id and post_status = 'publish' and post_type='post' order by p.post_title")
 
@@ -72,11 +74,27 @@ def getTitle(title):
     return title, ftitle
 
 posts = curin.fetchall()
+curout.execute("select max(id) from wp_posts");
+postid = curout.fetchall()[0][0]+1
+curout.execute("select term_id from wp_terms where name = 'Newsletters'")
+termid = curout.fetchall()[0][0]
+newscount = 0
 for post in posts:
     title, name, date, content, category = post
     if len(content) < 10: continue
-    if category in ["Newletters", "News items"]:
+    if category in ["News items"]:
         pass
+    elif category in ["Newletters"]:
+        tuple = (postid, date, date, content, title, name, date, date, "/?p=" + str(postid))
+        curout.execute("""insert into wp_posts (id, post_author, post_date, post_date_gmt, post_content, post_title,
+        post_excerpt, post_status, comment_status, ping_status, post_name,  to_ping, pinged, post_modified, post_modified_gmt,
+        post_content_filtered, guid, post_type, post_mime_type)
+        values (%s, 1, %s, %s, %s, %s, '', 'publish',
+        'closed', 'closed', %s, '', '', %s, %s, '', %s, 'post', '' )""", tuple)
+        tuple = (postid, termid)
+        curout.execute("""insert into wp_term_relationships (object_id, term_taxonomy_id) values(%s, %s)""", tuple)
+        postid += 1
+        newscount += 1
     else:
         if category == "Listings":continue
         if "Listings" in category or "Screenings" in category:
@@ -135,7 +153,36 @@ E ABCD ANNUAL SILENT CLASSIC"]:
         elif category == "Comments":
             comments[title] = content
 
-tags = re.compile(r"</?(.*?)>")
+curout.execute("update wp_term_taxonomy set count = " + str(newscount) + " where term_taxonomy_id = " + str(termid))
+# Read the scores into allscores list
+allscores = []
+f = open("scores.txt")
+for l in f.readlines():
+    bits = l.split(",")
+    if len(bits) != 7: abort("Too many commas " + l)
+    name = bits[0].lower()
+    scores = bits[1:6]
+    bits = name.split()
+    daterange = bits[0]
+    sorf = bits[1]
+    name = Set(bits[2:]) - little
+    allscores.append((name, daterange, sorf, scores, " ".join(bits[2:])))
+f.close()
+
+# Look for a match between a score and a film
+for n in range(4, 0, -1):
+    for screening in screenings:
+        twords = Set(screening.title.lower().split()) - little
+        bestmatch = 0
+        for score in allscores:
+            match = len(twords & score[0])
+            if match > bestmatch:
+                bestmatch = match
+                bestscore = score
+        if bestmatch == len(twords) or (bestmatch >= n and n > 1):
+            screening.scores = bestscore[3]
+            allscores.remove(bestscore)
+
 for screening in screenings:
     if screening.title in programmes:
         screening.programme = programmes[screening.title]
@@ -143,14 +190,14 @@ for screening in screenings:
     else:
         for title in programmes.keys():
             if title.lower().startswith(screening.title.lower()):
-                screening.programme = tags.sub('', programmes[title])
+                screening.programme = programmes[title]
                 del programmes[title]
                 break
     if not screening.programme:
         print "No prog for ",  screening.title, screening.date
 
     if screening.title in comments:
-        screening.comments = tags.sub('',comments[screening.title])
+        screening.comments = comments[screening.title]
         del comments[screening.title]
     else:
         for title in comments.keys():
@@ -192,6 +239,9 @@ for screening in screenings:
         else:
             allImages.remove(image)
 
+    if not screening.scores:
+        print "Missing scores", screening.title, screening.ftitle, screening.date
+
 print "\nSpare programes"
 for t in programmes:
     print t
@@ -204,13 +254,15 @@ print "\nUnused images"
 for image in allImages:
     print image
 
+print "\nUnused scores"
+for s in allscores:
+    print s[4], s[1], s[2]
+
 print "Now start importing", len(screenings), "screenings"
-curout.execute("select max(id) from wp_posts");
-postid = curout.fetchall()[0][0]+1
 curout.execute("select max(meta_id) from wp_postmeta");
 postmetaid = curout.fetchall()[0][0]+1
 
-for screening in screenings:      
+for screening in screenings:
     year = screening.date.year
     month = screening.date.month
     drel =  os.path.join("wp-content", "uploads", str(year), str(month))
@@ -222,7 +274,7 @@ for screening in screenings:
     tuple = (postid, image + screening.content, screening.title, screening.name, "/?post_type=screening&#038;p=" + str(postid))
 
     curout.execute("""insert into wp_posts (id, post_author, post_date, post_date_gmt, post_content, post_title,
-        post_excerpt, post_status, comment_status, ping_status, post_name,  to_ping, pinged, post_modified, post_modified_gmt, 
+        post_excerpt, post_status, comment_status, ping_status, post_name,  to_ping, pinged, post_modified, post_modified_gmt,
         post_content_filtered, guid, post_type, post_mime_type) values (%s, 1, now(), now(), %s, %s, '', 'publish',
         'closed', 'closed', %s, '', '', now(), now(), '', %s, 'screening', '' )""", tuple)
 
@@ -237,12 +289,27 @@ for screening in screenings:
         tuples.extend([(postmetaid, postid, 'comments', screening.comments),
               (postmetaid + 1, postid, '_comments', 'field_5831d6c520cc5')])
         postmetaid += 2
-
+    if screening.ftitle:
+        tuples.extend([(postmetaid, postid, 'aka', screening.ftitle),
+              (postmetaid + 1, postid, '_aka', 'field_58472e6b4230d')])
+        postmetaid += 2
+    if screening.scores:
+        tuples.extend([(postmetaid, postid, 'as', screening.scores[0]),
+              (postmetaid + 1, postid, '_as', 'field_5831d6f120cc6'),
+              (postmetaid + 2, postid, 'bs', screening.scores[1]),
+              (postmetaid + 3, postid, '_bs', 'field_5831d72220cc7'),
+              (postmetaid + 4, postid, 'cs', screening.scores[2]),
+              (postmetaid + 5, postid, '_cs', 'field_5838d1a9da65e'),
+              (postmetaid + 6, postid, 'ds', screening.scores[3]),
+              (postmetaid + 7, postid, '_ds', 'field_5838d1f4da660'),
+              (postmetaid + 8, postid, 'es', screening.scores[4]),
+              (postmetaid + 9, postid, '_es', 'field_5838d20cda661')])
+        postmetaid += 10
     curout.executemany("insert into wp_postmeta (meta_id, post_id, meta_key, meta_value) values (%s, %s, %s, %s)", tuples)
 
     mainPostId = postid
     postid += 1
-    
+
     if screening.image:
         d = os.path.join(base, drel)
         loc =  os.path.join(str(year), str(month), os.path.basename(screening.image))
@@ -258,7 +325,7 @@ for screening in screenings:
         tuple = (postid, screening.name, screening.name, os.path.join(drel, os.path.basename(screening.image)))
 
         curout.execute("""insert into wp_posts (id, post_author, post_date, post_date_gmt, post_content, post_title,
-        post_excerpt, post_status, ping_status, post_name,  to_ping, pinged, post_modified, post_modified_gmt, 
+        post_excerpt, post_status, ping_status, post_name,  to_ping, pinged, post_modified, post_modified_gmt,
         post_content_filtered, guid, post_type, post_mime_type) values (%s, 1, now(), now(), '', %s, '', 'inherit',
         'closed', %s, '', '', now(), now(), '', %s, 'attachment', 'image/jpeg' )""", tuple)
 
@@ -272,4 +339,3 @@ for screening in screenings:
 conin.close()
 conout.commit()
 conout.close()
-

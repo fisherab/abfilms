@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.6.1" created="2016-11-26 23:32" -->
+<!-- generator="WordPress/4.7" created="2016-12-11 20:55" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -26,10 +26,10 @@
 >
 
 <channel>
-	<title>t</title>
+	<title>Abingdon College &#38; District Film Society</title>
 	<link>http://localhost</link>
-	<description>Just another WordPress site</description>
-	<pubDate>Sat, 26 Nov 2016 23:32:27 +0000</pubDate>
+	<description></description>
+	<pubDate>Sun, 11 Dec 2016 20:55:47 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://localhost</wp:base_site_url>
@@ -57,8 +57,12 @@
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
 			<wp:meta_key>field_5831c93d1eac6</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5831c93d1eac6";s:5:"label";s:8:"Location";s:4:"name";s:8:"location";s:4:"type";s:4:"text";s:12:"instructions";s:40:"This is where the screening will be held";s:8:"required";s:1:"1";s:13:"default_value";s:27:"Health and Wellbeing Centre";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5831c93d1eac6";s:5:"label";s:8:"Location";s:4:"name";s:8:"location";s:4:"type";s:4:"text";s:12:"instructions";s:40:"This is where the screening will be held";s:8:"required";s:1:"1";s:13:"default_value";s:27:"Health and Wellbeing Centre";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -74,43 +78,47 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831ced85298d</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5831ced85298d";s:5:"label";s:13:"Date and Time";s:4:"name";s:8:"datetime";s:4:"type";s:16:"date_time_picker";s:12:"instructions";s:30:"Date and Time of the screening";s:8:"required";s:1:"1";s:9:"show_date";s:4:"true";s:11:"date_format";s:8:"yy-mm-dd";s:11:"time_format";s:5:"HH:mm";s:16:"show_week_number";s:5:"false";s:6:"picker";s:6:"select";s:17:"save_as_timestamp";s:4:"true";s:16:"get_as_timestamp";s:4:"true";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5831ced85298d";s:5:"label";s:13:"Date and Time";s:4:"name";s:8:"datetime";s:4:"type";s:16:"date_time_picker";s:12:"instructions";s:30:"Date and Time of the screening";s:8:"required";s:1:"1";s:9:"show_date";s:4:"true";s:11:"date_format";s:8:"yy-mm-dd";s:11:"time_format";s:5:"HH:mm";s:16:"show_week_number";s:5:"false";s:6:"picker";s:6:"select";s:17:"save_as_timestamp";s:4:"true";s:16:"get_as_timestamp";s:4:"true";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831cf3e5298e</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5831cf3e5298e";s:5:"label";s:11:"Certificate";s:4:"name";s:11:"certificate";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"choices";a:4:{s:2:"PG";s:2:"PG";s:1:"U";s:1:"U";s:1:"X";s:1:"X";i:18;s:2:"18";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5831cf3e5298e";s:5:"label";s:11:"Certificate";s:4:"name";s:11:"certificate";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"choices";a:6:{s:2:"PG";s:2:"PG";s:1:"U";s:1:"U";s:1:"X";s:1:"X";i:18;s:2:"18";i:12;s:2:"12";i:15;s:2:"15";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831d68620cc4</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5831d68620cc4";s:5:"label";s:5:"Notes";s:4:"name";s:5:"notes";s:4:"type";s:8:"textarea";s:12:"instructions";s:15:"Programme notes";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5831d68620cc4";s:5:"label";s:5:"Notes";s:4:"name";s:5:"notes";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:15:"Programme notes";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831d6c520cc5</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5831d6c520cc5";s:5:"label";s:8:"Comments";s:4:"name";s:8:"comments";s:4:"type";s:8:"textarea";s:12:"instructions";s:29:"Comments on the screened film";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:9:"maxlength";s:0:"";s:4:"rows";s:0:"";s:10:"formatting";s:2:"br";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5831d6c520cc5";s:5:"label";s:8:"Comments";s:4:"name";s:8:"comments";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:29:"Comments on the screened film";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831d6f120cc6</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5831d6f120cc6";s:5:"label";s:2:"As";s:4:"name";s:2:"as";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:20:"Number of A markings";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5831d6f120cc6";s:5:"label";s:2:"As";s:4:"name";s:2:"as";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:20:"Number of A markings";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831d72220cc7</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5831d72220cc7";s:5:"label";s:2:"Bs";s:4:"name";s:2:"bs";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5831d72220cc7";s:5:"label";s:2:"Bs";s:4:"name";s:2:"bs";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5838d1a9da65e</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d1a9da65e";s:5:"label";s:2:"Cs";s:4:"name";s:2:"cs";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d1a9da65e";s:5:"label";s:2:"Cs";s:4:"name";s:2:"cs";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5838d1f4da660</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d1f4da660";s:5:"label";s:2:"Ds";s:4:"name";s:2:"ds";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d1f4da660";s:5:"label";s:2:"Ds";s:4:"name";s:2:"ds";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5838d20cda661</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d20cda661";s:5:"label";s:2:"Es";s:4:"name";s:2:"es";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d20cda661";s:5:"label";s:2:"Es";s:4:"name";s:2:"es";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5838d221da662</wp:meta_key>
-			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d221da662";s:5:"label";s:5:"Total";s:4:"name";s:5:"total";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:15:{s:3:"key";s:19:"field_5838d221da662";s:5:"label";s:5:"Total";s:4:"name";s:5:"total";s:4:"type";s:6:"number";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:1:"0";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:3:"min";s:1:"0";s:3:"max";s:4:"1000";s:4:"step";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_58472e6b4230d</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_58472e6b4230d";s:5:"label";s:3:"aka";s:4:"name";s:3:"aka";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5831cf3e5298e";s:8:"operator";s:2:"==";s:5:"value";s:2:"PG";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
