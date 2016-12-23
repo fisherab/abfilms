@@ -6,16 +6,31 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', ' <em> Cert: ' . get_field('certificate') .'</em></h1>' ); ?>
+			<?php
+			$tit = '';
+			if (get_field('aka')) {
+				$tit = $tit . ' <em>(' . get_field('aka') . ')</em>';
+			}
+
+			the_title( '<h1 class="entry-title">', $tit . '</h1>' ); ?>
+
 	</header><!-- .entry-header -->
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
-		$time =  date_i18n('H:i', get_field('datetime'));
+		$tim =  date_i18n('H:i', get_field('datetime'));
+		if ($tim == '00:00') {
+				$fmt = 'j/m/Y';
+		} else {
+				$fmt = 'j/m/Y H:i';
+		}
 
-		echo '<em>' . date_i18n('M j, Y H:i', get_field('datetime')) . ' at ' . get_field('location'). '</em>';
+		echo '<em>' . date_i18n($fmt, get_field('datetime')) . ' at ' . get_field('location') . '.</em>';
+		if (get_field('certificate')) {
+			echo '<br/>Cert ' . get_field('certificate');
+		}
 
 		the_content();
 

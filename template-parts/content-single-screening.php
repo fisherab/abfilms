@@ -6,7 +6,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', ' <em> Cert: ' . get_field('certificate') .'</em></h1>' ); ?>
+		<?php
+		$tit = '';
+    if (get_field('aka')) {
+			$tit = $tit . ' <em>(' . get_field('aka') . ')</em>';
+		}
+
+		the_title( '<h1 class="entry-title">', $tit . '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php twentysixteen_excerpt(); ?>
@@ -16,11 +22,17 @@
 	<div class="entry-content">
 		<?php
 
-      echo '<h2>Listing</h2>';
+			$tim =  date_i18n('H:i', get_field('datetime'));
+			if ($tim == '00:00') {
+				  $fmt = 'j/m/Y';
+			} else {
+				  $fmt = 'j/m/Y H:i';
+			}
 
-			$time =  date_i18n('H:i', get_field('datetime'));
-
-			echo '<em>' . date_i18n('M j, Y H:i', get_field('datetime')) . ' at ' . get_field('location'). '</em>';
+			echo '<em>' . date_i18n($fmt, get_field('datetime')) . ' at ' . get_field('location') . '.</em>';
+			if (get_field('certificate')) {
+				echo '<br/>Cert ' . get_field('certificate');
+			}
 
 			the_content();
 
@@ -38,9 +50,13 @@
 					echo 'C:' . get_field('cs') . ', ';
 					echo 'D:' . get_field('ds') . ', ';
 					echo 'E:' . get_field('es');
-					$num = (get_field('as')*100 + get_field('bs')*75 + get_field('cs')*50 +  get_field('ds') *25) / (get_field('as') + get_field('bs') + get_field('cs') + get_field('ds') + get_field('es'));
-					echo ' to give:' . round($num, 1) . '%';
+					$votes = get_field('as') + get_field('bs') + get_field('cs') + get_field('ds') + get_field('es');
+					$num = (get_field('as')*100 + get_field('bs')*75 + get_field('cs')*50 +  get_field('ds') *25) / $votes;
 
+					echo ' to give:' . round($num, 1) . '%';
+					if (get_field('total')) {
+					    echo ' from ' . round($votes*100/get_field('total'),1) . '% of those present.';
+					}
 			}
 
 		?>
