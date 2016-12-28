@@ -12,7 +12,7 @@
 				$tit = $tit . ' <em>(' . get_field('aka') . ')</em>';
 			}
 
-			the_title( '<h1 class="entry-title">', $tit . '</h1>' ); ?>
+			the_title( '<h2 class="entry-title">', $tit . '</h2>' ); ?>
 
 	</header><!-- .entry-header -->
 

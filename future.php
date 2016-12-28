@@ -2,37 +2,36 @@
 /**
  * Template Name: future
  */
- $posts = get_posts(array(
- 	'posts_per_page'	=> -1,
- 	'post_type'			=> 'screening',
- 	'meta_key'			=> 'datetime',
- 	'orderby'			  => 'meta_value_num',
- 	'order'				  => 'ASC',
+ $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+ $query_args = array(
+  'posts_per_page' => 3,
+  'paged'          => $paged,
+ 	'post_type'			 => 'screening',
+ 	'meta_key'			 => 'datetime',
+ 	'orderby'			   => 'meta_value_num',
+ 	'order'				   => 'ASC',
  	'meta_query' => array(
  		'key' => 'datetime',
  		'type' => 'numeric',
  		'value' => current_time('timestamp'),
  		'compare' => '>',
  	),
- ));
+ );
+
+$the_query = new WP_Query($query_args);
 
 get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<?php
-		// Start the loop.
-		foreach( $posts as $post ):
-			setup_postdata( $post );
-
-			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page-screening' );
-
-			// End of the loop.
-		endforeach;
-
-		wp_reset_postdata();
-		?>
+      <h1>Future Screenings</h1>
+      <?php
+      while ( $the_query->have_posts() ) :
+        $the_query->the_post();
+        get_template_part( 'template-parts/content', 'page-screening' );
+      endwhile;
+      custom_pagination($the_query->max_num_pages,"",$paged);
+      ?>
 
 	</main><!-- .site-main -->
 

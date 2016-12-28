@@ -29,7 +29,12 @@
 				  $fmt = 'j/m/Y H:i';
 			}
 
-			echo '<em>' . date_i18n($fmt, get_field('datetime')) . ' at ' . get_field('location') . '.</em>';
+      if (get_field('location)')) {
+				$loc = ' at ' . get_field('location');
+			} else {
+				$loc = '';
+			}
+			echo '<em>' . date_i18n($fmt, get_field('datetime')) . $loc . '.</em>';
 			if (get_field('certificate')) {
 				echo '<br/>Cert ' . get_field('certificate');
 			}
@@ -44,19 +49,21 @@
 			if (get_field('comments')) {
 					echo '<h2>Comments</h2>';
 					echo get_field('comments');
-					echo '<h2>Scores</h2>';
-					echo 'A:' . get_field('as') . ', ';
-					echo 'B:' . get_field('bs') . ', ';
-					echo 'C:' . get_field('cs') . ', ';
-					echo 'D:' . get_field('ds') . ', ';
-					echo 'E:' . get_field('es');
 					$votes = get_field('as') + get_field('bs') + get_field('cs') + get_field('ds') + get_field('es');
-					$num = (get_field('as')*100 + get_field('bs')*75 + get_field('cs')*50 +  get_field('ds') *25) / $votes;
+					if ($votes) {
+						echo '<h2>Scores</h2>';
+						echo 'A:' . get_field('as') . ', ';
+						echo 'B:' . get_field('bs') . ', ';
+						echo 'C:' . get_field('cs') . ', ';
+						echo 'D:' . get_field('ds') . ', ';
+						echo 'E:' . get_field('es');
 
-					echo ' to give:' . round($num, 1) . '%';
-					if (get_field('total')) {
+						$num = (get_field('as')*100 + get_field('bs')*75 + get_field('cs')*50 +  get_field('ds') *25) / $votes;
+						echo ' to give ' . round($num, 0) . '%';
+						if (get_field('total')) {
 					    echo ' from ' . round($votes*100/get_field('total'),1) . '% of those present.';
-					}
+						}
+				 }
 			}
 
 		?>

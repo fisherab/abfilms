@@ -2,8 +2,8 @@
 /**
  * Template Name: past-by-title
  */
-$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-$query_args = array(
+ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+ $query_args = array(
   'posts_per_page' => 20,
   'paged'          => $paged,
  	'post_type'			 => 'screening',
@@ -26,7 +26,8 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
     <h1>Past Screenings by Title</h1>
 		<?php
-    while ( $the_query->have_posts() ) : $the_query->the_post();
+    while ( $the_query->have_posts() ) :
+      $the_query->the_post();
       get_template_part( 'template-parts/content', 'page-summary' );
 		endwhile;
     custom_pagination($the_query->max_num_pages,"",$paged);

@@ -5,7 +5,7 @@
  if (get_field('as')) {
 
  $num = (get_field('as')*100 + get_field('bs')*75 + get_field('cs')*50 +  get_field('ds') *25) / (get_field('as') + get_field('bs') + get_field('cs') + get_field('ds') + get_field('es'));
- echo ' - Score:' . round($num, 1) . '%';
+ echo ' - Score:' . round($num, 0) . '%';
  }
  ?>
 

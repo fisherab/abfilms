@@ -22,7 +22,7 @@ get_header(); ?>
     while ( $the_query->have_posts() ) : $the_query->the_post();
       ?>
       <li>
-            <a href="<?php the_permalink(); ?>"><?php the_date(); echo ' : '; the_title(); ?></a>
+            <a href="<?php the_permalink(); ?>"><?php the_date(); ?></a>
 
       </li>
     <?php
