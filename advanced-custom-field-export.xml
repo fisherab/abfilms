@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.7" created="2016-12-22 18:22" -->
+<!-- generator="WordPress/4.7" created="2016-12-29 21:41" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -27,20 +27,20 @@
 
 <channel>
 	<title>ABCD Film Society</title>
-	<link>http://localhost</link>
-	<description></description>
-	<pubDate>Thu, 22 Dec 2016 18:22:58 +0000</pubDate>
+	<link>http://abfilms.org.uk</link>
+	<description>Films in Abingdon</description>
+	<pubDate>Thu, 29 Dec 2016 21:41:46 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
-	<wp:base_site_url>http://localhost</wp:base_site_url>
-	<wp:base_blog_url>http://localhost</wp:base_blog_url>
+	<wp:base_site_url>http://abfilms.org.uk</wp:base_site_url>
+	<wp:base_blog_url>http://abfilms.org.uk</wp:base_blog_url>
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>fisher</wp:author_login><wp:author_email>dr.s.m.fisher@gmail.com</wp:author_email><wp:author_display_name><![CDATA[fisher]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 	<item>
 		<title>Screening</title>
-		<link>http://localhost/?acf=acf_screening</link>
+		<link>http://abfilms.org.uk/?acf=acf_screening</link>
 		<pubDate>Sun, 20 Nov 2016 16:08:17 +0000</pubDate>
 		<dc:creator>fisher</dc:creator>
-		<guid isPermaLink="false">http://localhost/?post_type=acf&#038;p=14</guid>
+		<guid isPermaLink="false">http://abfilms.org.uk/?post_type=acf&#038;p=14</guid>
 		<wp:post_id>14</wp:post_id>
 		<wp:post_date>2016-11-20 16:08:17</wp:post_date>
 		<wp:post_date_gmt>2016-11-20 16:08:17</wp:post_date_gmt>
@@ -82,7 +82,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831cf3e5298e</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5831cf3e5298e";s:5:"label";s:11:"Certificate";s:4:"name";s:11:"certificate";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:9:{s:1:"U";s:1:"U";s:2:"PG";s:2:"PG";s:3:"12A";s:3:"12A";i:12;s:2:"12";i:15;s:2:"15";i:18;s:2:"18";s:1:"X";s:1:"X";s:1:"E";s:1:"E";s:0:"";s:0:"";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5831cf3e5298e";s:5:"label";s:11:"Certificate";s:4:"name";s:11:"certificate";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"choices";a:9:{s:1:"U";s:1:"U";s:2:"PG";s:2:"PG";s:3:"12A";s:3:"12A";i:12;s:2:"12";i:15;s:2:"15";i:18;s:2:"18";s:1:"X";s:1:"X";s:1:"E";s:1:"E";s:0:"";s:0:"";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5831d68620cc4</wp:meta_key>
