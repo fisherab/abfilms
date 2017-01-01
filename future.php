@@ -24,7 +24,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-      <h1>Future Screenings</h1>
+      <header class="entry-header">
+        <h1 class="entry-title">Future Screenings</h1>
+      </header>
       <?php
       while ( $the_query->have_posts() ) :
         $the_query->the_post();

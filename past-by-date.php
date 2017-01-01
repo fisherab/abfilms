@@ -24,13 +24,15 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-    <h1>Past Screenings by Date</h1>
+    <header class="entry-header">
+      <h1 class="entry-title">Past Screenings by Date</h1>
 		<?php
     while ( $the_query->have_posts() ) : $the_query->the_post();
       get_template_part( 'template-parts/content', 'page-summary' );
 		endwhile;
     custom_pagination($the_query->max_num_pages,"",$paged);
     ?>
+    </header>
 
 	</main><!-- .site-main -->
 

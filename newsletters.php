@@ -17,18 +17,21 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-    <h1>Newsletters</h1>
+    <header class="entry-header">
+      <h1 class="entry-title">Newsletters</h1>
 		<?php
     while ( $the_query->have_posts() ) : $the_query->the_post();
       ?>
-      <li>
-            <a href="<?php the_permalink(); ?>"><?php the_date(); ?></a>
-
-      </li>
+      <div class="entry-content>"
+        <li>
+          <a href="<?php the_permalink(); ?>"><?php the_date(); ?></a>
+        </li>
+      </div>
     <?php
 		endwhile;
     custom_pagination($the_query->max_num_pages,"",$paged);
     ?>
+    </header>
 
 	</main><!-- .site-main -->
 
