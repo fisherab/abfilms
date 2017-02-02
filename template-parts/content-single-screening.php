@@ -61,7 +61,7 @@
 						$num = (get_field('as')*100 + get_field('bs')*75 + get_field('cs')*50 +  get_field('ds') *25) / $votes;
 						echo ' to give ' . round($num, 0) . '%';
 						if (get_field('total')) {
-					    echo ' from ' . round($votes*100/get_field('total'),1) . '% of those present.';
+					    echo ' from ' . round($votes*100/get_field('total'),0) . '% of those present.';
 						}
 				 }
 			}
