@@ -29,7 +29,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
     <header class="entry-header">
-      <h1 class="entry-title">Past Screenings by Poularity</h1>
+      <h1 class="entry-title">Past Screenings by Popularity</h1>
 		<?php
     foreach ($sql_result as $row) {
         $post = get_post($row->a);
